@@ -6,7 +6,7 @@ export default function Footer() {
       <p>
         &copy; Desenvolvido por{" "}
         <a
-          href="http://"
+          href="https://github.com/g4brielpy"
           target="_blank"
           rel="noopener noreferrer"
           className="font-bold hover:underline"
