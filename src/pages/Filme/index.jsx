@@ -4,6 +4,8 @@ import { useState, useEffect } from "react";
 import { ButtonA } from "../../components/IU/Button";
 import { API } from "../../utils/api";
 
+import { toast } from "react-toastify";
+
 import Loading from "./loading";
 
 export default function Filme() {
@@ -46,7 +48,7 @@ export default function Filme() {
   function saveMovie() {
     // Verificar se o filme já está favoritado
     if (isSalvo) {
-      alert("Filme já favoritado");
+      toast.info("Filme já favoritado");
       return;
     }
 
@@ -57,7 +59,7 @@ export default function Filme() {
     // Atualizar o localStorage
     localStorage.setItem("@filmesFavoritos", JSON.stringify(novosFilmes));
 
-    alert("Filme salvo com sucesso!");
+    toast.success("Filme salvo com sucesso!");
     setIsSalvo(true); // Desativa o botão
   }
 
